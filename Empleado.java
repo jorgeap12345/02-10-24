@@ -12,9 +12,9 @@ public class Empleado implements Runnable {
         try {
             while (true) {
                 Pedido pedido = colaPedidos.take();
-          
+                
                 System.out.println(Thread.currentThread().getName() + " esta procesando " + pedido);
-                Thread.sleep(1000);
+                Thread.sleep(2000);
                 System.out.println(Thread.currentThread().getName() + " ha completado " + pedido);
             }
         } catch (InterruptedException e) {
